@@ -55,6 +55,18 @@ defmodule ExMonTest do
       assert messages =~ "status: :continue"
     end
 
+    test "when the heal move is valid" do
+      messages =
+        capture_io(fn ->
+          ExMon.make_move(:heal)
+        end)
+
+      assert messages =~ "The player healled itself"
+      assert messages =~ "It's computer turn"
+      assert messages =~ "It's player turn"
+      assert messages =~ "status: :continue"
+    end
+
     test "when the move is invalid, returns an error message" do
       messages =
         capture_io(fn ->
