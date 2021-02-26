@@ -69,7 +69,7 @@ ExMon.make_move(:soco)
 ExMon.make_move(:curar)
 ```
 
-Assim que o jogador ou o computador chegar a **zero** pontos de vida, o jogo termina.
+Assim que o jogador ou o computador chegar a **zero** pontos de vida, o jogo termina
 
 
 ## Executando testes
